@@ -1,0 +1,20 @@
+timeout: 60
+retries: 1
+chunk_pages: 6
+chunk_chars: 12000
+max_file_mb: 25
+warn_pages: 200
+dpi: 150
+slots:
+- name: Anthropic
+  model: claude-sonnet-5.5
+  vision: true
+  local: false
+  base_url_env: PRIMARY_BASE_URL
+  key_env: PRIMARY_API_KEY
+- name: OpenAI
+  model: GPT-4.6
+  vision: true
+  local: false
+  base_url_env: SECONDARY_BASE_URL
+  key_env: SECONDARY_API_KEY

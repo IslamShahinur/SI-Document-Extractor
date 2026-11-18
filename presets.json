@@ -1,0 +1,68 @@
+{
+  "certificate": {
+    "key": "certificate",
+    "label": "Certificate",
+    "mode": "per_file",
+    "fields": [
+      {"key": "certificate_name", "desc": "Name or title of the certificate"},
+      {"key": "recipient_name", "desc": "Person named as the certificate recipient"},
+      {"key": "issuing_organization", "desc": "Organization that issued the certificate"},
+      {"key": "issue_date", "desc": "Date the certificate was issued"},
+      {"key": "expiry_date", "desc": "Expiration date, if stated"},
+      {"key": "credential_id", "desc": "Certificate or credential identifier, if stated"}
+    ],
+    "instructions": "Extract the certificate details exactly as stated."
+  },
+  "financial": {
+    "key": "financial",
+    "label": "Financial Statement",
+    "mode": "multi_row",
+    "fields": [
+      {"key": "statement_type", "desc": "Type of financial statement or schedule"},
+      {"key": "period", "desc": "Reporting period for the line item"},
+      {"key": "line_item", "desc": "Name of the account, metric, or financial line item"},
+      {"key": "amount", "desc": "Numeric amount as presented, preserving sign"},
+      {"key": "currency", "desc": "Currency code or symbol shown"}
+    ],
+    "instructions": "Extract each financial line item as a separate row. Preserve reported values; do not calculate or infer amounts."
+  },
+  "research": {
+    "key": "research",
+    "label": "Research Paper",
+    "mode": "per_file",
+    "fields": [
+      {"key": "title", "desc": "Title of the paper"},
+      {"key": "authors", "desc": "Authors in the order listed"},
+      {"key": "year", "desc": "Publication year"},
+      {"key": "abstract", "desc": "Paper abstract or concise abstract summary"},
+      {"key": "methods", "desc": "Research methods and study design"},
+      {"key": "key_findings", "desc": "Main findings reported by the authors"},
+      {"key": "limitations", "desc": "Limitations stated in the paper"},
+      {"key": "keywords", "desc": "Keywords listed by the authors"}
+    ],
+    "instructions": "Summarize only information supported by the paper. Keep author statements distinct from interpretation."
+  },
+  "cv_data": {
+    "key": "cv_data",
+    "label": "CV / Resume",
+    "mode": "per_file",
+    "fields": [
+      {"key": "name", "desc": "Full name"},
+      {"key": "contact", "desc": "Email, phone, and location or professional links"},
+      {"key": "education", "desc": "Education, institutions, qualifications, and dates"},
+      {"key": "experience", "desc": "Work experience, roles, employers, and dates"},
+      {"key": "skills", "desc": "Skills listed"},
+      {"key": "certifications", "desc": "Certifications and credentials"},
+      {"key": "languages", "desc": "Languages and proficiency when stated"},
+      {"key": "achievements", "desc": "Notable achievements and awards"}
+    ],
+    "instructions": "Extract the candidate's stated information without adding inferred qualifications or dates."
+  },
+  "custom": {
+    "key": "custom",
+    "label": "Custom",
+    "mode": "per_file",
+    "fields": [],
+    "instructions": "Follow the user command and return the requested information."
+  }
+}
