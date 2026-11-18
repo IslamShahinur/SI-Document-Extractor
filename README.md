@@ -15,7 +15,7 @@ python -m pip install -r requirements.txt
 
 ## Configure models
 
-Copy `.env.example` to `.env` and set the base URL and API key for the providers
+Configure `.env` and set the base URL and API key for the providers
 configured in `config.yaml`. Keep `.env` private; it is git-ignored.
 
 ### Slot setup
